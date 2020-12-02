@@ -1,0 +1,31 @@
+<div class="login-wrapper">
+    <form class="login" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <section class="title">
+        <div class="img-logo">
+          <img src="assets/img/gotodigital-main.png">
+        </div>
+        Digital Cupcake System
+        <h5 class="hint">LogIn</h5>
+      </section>
+      <div class="login-group">
+        <clr-input-container>
+          <label class="clr-sr-only">LogIn</label>
+          <input type="text" name="username" clrInput placeholder="Username" formControlName="username" />
+          
+        </clr-input-container>
+        <clr-password-container>
+          <label class="clr-sr-only">Password</label>
+          <input type="password" name="password" clrPassword placeholder="Password" formControlName="password"/>
+         
+        </clr-password-container>
+        <clr-checkbox-wrapper>
+          <label>Remember me</label>
+          <input type="checkbox" name="rememberMe" clrCheckbox />
+        </clr-checkbox-wrapper>
+        <div class="error active" *ngIf="(submitted && form.password.errors) || errorAuth " class="invalid-feedback">
+          Nombre de usuario o contraseña erroneas
+        </div>
+        <button type="submit" class="btn btn-primary">LOGIN</button>
+      </div>
+    </form>
+  </div>

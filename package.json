@@ -23,6 +23,7 @@
     "@clr/core": "^4.0.7",
     "@clr/icons": "^4.0.7",
     "@clr/ui": "^4.0.7",
+    "@webcomponents/custom-elements": "^1.0.0",
     "@webcomponents/webcomponentsjs": "^2.5.0",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
