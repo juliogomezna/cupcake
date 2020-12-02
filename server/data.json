@@ -1,0 +1,76 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "username": "john.doe",
+            "name": "John Doe",
+            "password": "12345",
+            "role": "USER",
+            "country": "United States",
+            "description": "This is a test"
+        },
+        {
+            "id": 2,
+            "username": "admin",
+            "name": "System Administrator",
+            "password": "admin",
+            "role": "ADMINISTRATOR",
+            "country": "United States",
+            "description": "This is the admin"
+        },
+        {
+            "id": 3,
+            "username": "james.smith",
+            "name": "James Smith",
+            "password": "12345",
+            "role": "OBSERVER",
+            "country": "Italy",
+            "description": null
+        },
+        {
+            "id": 4,
+            "username": "jane.doe",
+            "name": "Jane Doe",
+            "password": "12345",
+            "role": "USER",
+            "country": "France",
+            "description": null
+        },
+        {
+            "id": 5,
+            "username": "mary_smith",
+            "name": "Mary Smith",
+            "password": "12345",
+            "role": "USER",
+            "country": "Venezuela",
+            "description": "This is a test"
+        },
+        {
+            "id": 6,
+            "username": "david_jones123",
+            "name": "David Jones",
+            "password": "12345",
+            "role": "USER",
+            "country": "Venezuela",
+            "description": "This is a test"
+        },
+        {
+            "id": 7,
+            "username": "yrsa93",
+            "name": "Yrsa Sigurðardóttir",
+            "password": "12345",
+            "role": "USER",
+            "country": "Iceland",
+            "description": "This is a test"
+        },
+        {
+            "id": 8,
+            "username": "test1",
+            "name": "User Test",
+            "password": "12345",
+            "role": null,
+            "country": "Japan",
+            "description": "This is a test"
+        }
+    ]
+}
