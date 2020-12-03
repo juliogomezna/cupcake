@@ -1,0 +1,24 @@
+<div class="main-container">
+    <div class="alert alert-app-level">
+        Code for interview purpose
+    </div>
+    <header class="header header-6">
+        <div class="branding">
+            <a [routerLink]="['/','home']" class="logo-and-title">
+                <img [src]="mainImage">
+                <span class="title">
+                   Digital Cupcake
+                </span>
+            </a>
+        </div>
+        <div class="account-info">
+            <span class="badge badge-5">Welcome, {{ loggedUser && loggedUser.name ? loggedUser.name : 'User'}}</span>
+        </div>
+    </header>
+    <div class="content-container">
+        <div class="content-area">
+            <home-user-list></home-user-list>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

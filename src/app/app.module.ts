@@ -9,6 +9,7 @@ import { ClarityModule } from "@clr/angular";
 import { CoreModule } from './core/core.module';
 import { LoginComponent } from './components/login/login.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -20,10 +21,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
     ClarityModule,
-    
     AppRoutingModule,
     BrowserAnimationsModule,
-    CoreModule
+    CoreModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

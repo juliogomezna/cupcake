@@ -18,4 +18,14 @@ export class UserService {
         )
     }
 
+    getAllUsers():Observable<User[]>{
+        return this.userApiService.getAllUsers().pipe(
+            filter(users => users && users.length > 0)
+        )
+    }
+
+    updateUser(user:User): Observable<User> {
+        return  this.userApiService.updateUser(user);
+    }
+
 }

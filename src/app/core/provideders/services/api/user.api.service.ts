@@ -22,4 +22,8 @@ export class UserApiService {
         return this.http.get<User[]>(`${environment.serverUrl}/users`,{params: params});
     }
 
+    updateUser(user:User): Observable<User> {
+        return this.http.put<User>(`${environment.serverUrl}/users/${user.id}`,user);
+    }
+
 }

@@ -1,0 +1,66 @@
+<div class="row">
+    <form class="clr-form clr-form-horizontal" (ngSubmit)="onSubmit()">
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" *ngIf="user && currentUser; else loading">
+            <div class="card">
+                <div class="card-header">
+                    {{ user.name }}
+                </div>
+                <div class="card-block">
+                    <div class="card-media-block">
+                        <img [src]="userImage" class="card-media-image">
+                        <div class="card-media-description">
+                            <span class="card-media-title">
+                                Username: {{user.username}}
+                            </span>
+                            <span class="card-media-text">
+                                Role: {{ user.role}}
+                            </span>
+
+                            <div class="clr-form-control">
+                                
+                                <div class="clr-control-container clr-col-xs-12 clr-col-md-10">
+                                    <div class="clr-input-wrapper">
+                                        <input clrInput type="text" [(ngModel)]="user.country" name="example" [disabled]="currentUser.role == roles.OBSERVER || currentUser.role == roles.ADMIN"/>
+                                        <clr-icon class="clr-validate-icon" shape="exclamation-circle"></clr-icon>
+                                    </div>
+                                    <span class="clr-subtext">Country</span>
+                                </div>
+                            </div>
+
+                            <div class="clr-form-control">
+                                <div class="clr-control-container clr-col-xs-12 clr-col-md-10">
+                                    <div class="clr-input-wrapper">
+                                        <textarea clrTextarea [(ngModel)]="user.description" name="description" [disabled]="currentUser &&  currentUser.role == roles.OBSERVER"></textarea>
+                                        <clr-icon class="clr-validate-icon" shape="exclamation-circle"></clr-icon>
+                                    </div>
+                                    <span class="clr-subtext">Description</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-text">
+
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary" [disabled]="(currentUser && currentUser.role == roles.OBSERVER)">Save</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <ng-template #loading>
+        <div class="loading-placeholder"></div>
+        <div class="row">
+            <div class="col-12 col-md-6 text -center">
+                <div class="product-image">
+                    <div class="placeholder-image loading-placeholder">Loading user</div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="placeholder-title loading-placeholder"></div>
+                <div class="placeholder-description loading-placeholder"></div>
+            </div>
+        </div>
+    </ng-template>
+
+</div>

@@ -4,6 +4,8 @@ import { first } from 'rxjs/operators';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { UserService } from '../../core/provideders/services/user.service'
 import { SessionService } from '../../core/provideders/services/session.service'
+import { HOME_URL,MAIN_IMAGE } from '../../common/constants'
+
 @Component({
     selector: 'app-login',
     templateUrl: './login.component.html',
@@ -16,6 +18,7 @@ export class LoginComponent implements OnInit {
     submitted = false;
     returnUrl: string;
     errorAuth: boolean
+    mainImage = MAIN_IMAGE
 
     constructor(
         private formBuilder: FormBuilder,
@@ -48,6 +51,7 @@ export class LoginComponent implements OnInit {
             .subscribe(user => {
                 this.errorAuth = false
                 this.sessionService.session = user
+                this.router.navigate([HOME_URL], { relativeTo: this.route });
             },error => this.errorAuth = true,
             () => {
                 if(this.errorAuth){

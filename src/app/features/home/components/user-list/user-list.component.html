@@ -1,0 +1,4 @@
+<h1>User List</h1>
+<div *ngFor="let user of users$ | async">
+    <home-user-card [user]="user" [currentUser]="currentUser"></home-user-card>
+</div>

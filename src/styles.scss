@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+.loading-placeholder {
+    position: relative;
+    overflow: hidden;
+    background-color: #e6e4e4;
+    &::after {
+        content: "";
+        display: block;
+        background-color: #e6e4e4;
+        opacity: 0.3;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateX(0);
+        animation: 1.5s loading-placeholder ease-in-out infinite;
+    }
+}
